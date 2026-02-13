@@ -3,7 +3,7 @@ import axios from 'axios';
 import { LayoutDashboard, Users, CalendarCheck, Plus, Trash2, CheckCircle, XCircle } from 'lucide-react';
 import './index.css';
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
 
 function App() {
     const [activeTab, setActiveTab] = useState('dashboard');
