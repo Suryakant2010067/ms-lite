@@ -13,6 +13,8 @@ Follow these steps to deploy your HRMS Lite application to the cloud.
     - **Root Directory**: `backend`
     - **Build Command**: `pip install -r requirements.txt`
     - **Start Command**: `gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app`
+> [!IMPORTANT]
+> **Ensure you replace the default Start Command** in Render settings with the one above. The error `No module named 'your_application'` happens if you leave the default placeholder!
 5.  **Deploy**: Click **Create Web Service**.
 6.  **Copy URL**: Once deployed, copy the service URL (e.g., `https://hrms-backend.onrender.com`).
 
